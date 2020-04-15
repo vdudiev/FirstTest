@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">FirstTest</string>
+    <string name="calcName">Калькулятор</string>
+    <string name="count_amount_text">Сумма Займа, руб</string>
+    <string name="home_name">Займы</string>
+    <string name="news_name">Новости</string>
+    <string name="loans_name">Займы</string>
+    <string name="term_days">Срок, дней</string>
+    <string name="rate_percent">Ставка, %</string>
+    <string name="calculate_button">Расчитать</string>
+    <string name="text_rate">Ставка</string>
+    <string name="string_editText_input_days">14</string>
+    <string name="string_editText_input_rate_percent">4</string>
+    <string name="string_edit_amount_input">20000</string>
+    <string name="string_conditions">Условия</string>
+    <string name="string_amount">Сумма</string>
+    <string name="string_term">Срок</string>
+    <string name="string_return_amount">Сумма к возврату:</string>
+    <string name="string_overpayment">Переплата</string>
+    <string name="string_amount_to_return_output">31200</string>
+    <string name="string_overpayment_output">11200</string>
+    <string name="string_button_pick_up">Подобрать</string>
+    <string name="string_button_choose">Выбрать</string>
+    <string name="string_good_offers">Выгодные прдложения</string>
+    <string name="text_production_methods">Способ получения</string>
+    <string name="string_amount_editTex_pickUp">10000</string>
+    <string name="string_term_days_pickUp">10</string>
+    <string name="textView_production_methods_comboBox">Наличными</string>
+</resources>
