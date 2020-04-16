@@ -163,19 +163,17 @@
                 </LinearLayout>
 
 
-
-
                 <Button
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="20dp"
                     android:background="@drawable/round_corner_button_white"
+                    android:onClick="pickUpOpenSecondAct"
                     android:text="@string/string_button_pick_up"
                     android:textColor="@color/colorBlack"
-                    android:layout_marginTop="20dp"
-                    android:textSize="12sp"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginEnd="20dp"
-                    android:onClick="pickUpOpenSecondAct" />
+                    android:textSize="12sp" />
             </LinearLayout>
             <TextView
                 android:layout_width="wrap_content"

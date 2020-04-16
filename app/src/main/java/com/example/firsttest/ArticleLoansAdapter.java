@@ -5,6 +5,7 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -29,9 +30,19 @@ public class ArticleLoansAdapter extends RecyclerView.Adapter<ArticleLoansAdapte
     @NonNull
     @Override
     public ArticleLoansAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-
-
         View view = inflater.inflate(R.layout.recycler_row_loans, parent, false);
+
+        Button detailsButton = view.findViewById(R.id.button_details_row_loans);
+        detailsButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                SecondActivityMain secondActivityMain = new SecondActivityMain();
+                secondActivityMain.openCompaniesDetailsBottomSheet();
+
+            }
+        });
+
+
         return new ViewHolder(view);
     }
 

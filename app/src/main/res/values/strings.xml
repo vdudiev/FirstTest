@@ -26,4 +26,7 @@
     <string name="string_amount_editTex_pickUp">10000</string>
     <string name="string_term_days_pickUp">10</string>
     <string name="textView_production_methods_comboBox">Наличными</string>
+    <string name="conditions_for_obtaining_loan">Условия получения займа</string>
+    <string name="string_requirement_for_borrower">Требования к замщику</string>
+    <string name="string_repayment_option">Способ погашения</string>
 </resources>

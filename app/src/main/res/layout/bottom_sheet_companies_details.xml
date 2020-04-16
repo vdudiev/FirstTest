@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/round_corner_button_white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="end">
+        <TextView
+            android:id="@+id/texView_name_details_bottomSheet"
+            android:text="Viva деньги"
+            android:textColor="@color/colorBlack"
+            android:textSize="19sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+
+        <Button
+            android:id="@+id/button_close_details_bottomSheet"
+            android:layout_width="30dp"
+            android:layout_marginStart="105dp"
+            android:layout_marginEnd="25dp"
+            android:layout_height="30dp"
+            android:background="@drawable/cross"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:text="@string/string_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="10sp"
+                android:textColor="@color/dark_gray"
+                android:layout_marginBottom="5dp"/>
+
+            <TextView
+                android:text="@string/string_term"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="10sp"
+                android:textColor="@color/dark_gray"
+                android:layout_marginBottom="5dp"/>
+
+            <TextView
+                android:text="@string/text_rate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="10sp"
+                android:textColor="@color/dark_gray"
+                android:layout_marginBottom="5dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="20dp">
+
+            <TextView
+                android:id="@+id/textView_sum_toSum_details_bottomSheet"
+                android:text="ОТ 1000 ДО 40000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="10sp"
+                android:textColor="@color/colorBlack"
+                android:layout_marginBottom="5dp"/>
+
+            <TextView
+                android:id="@+id/textView_date_toDate_details_bottomSheet"
+                android:text="OT 7 ДО 365"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="10sp"
+                android:textColor="@color/colorBlack"
+                android:layout_marginBottom="5dp"/>
+
+            <TextView
+                android:id="@+id/texView_rate_details_bottomSheet"
+                android:text="0.5%-0.0%"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="10sp"
+                android:textColor="@color/colorBlack"
+                android:layout_marginBottom="5dp"/>
+        </LinearLayout>
+
+        <ImageView
+            android:src="@mipmap/ic_launcher_round"
+            android:id="@+id/imageView_logo_details_bottomSheet"
+            android:scaleType="centerCrop"
+            android:layout_width="40dp"
+            android:layout_marginTop="8dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="50dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/dark_gray"
+        android:layout_marginStart="22dp"
+        android:layout_marginEnd="22dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="24dp"
+        android:text="@string/conditions_for_obtaining_loan"
+        android:textColor="@color/colorBlack"
+        android:textSize="15sp"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:textColor="@color/colorBlack"
+                android:text="@string/string_requirement_for_borrower"/>
+
+            <TextView
+                android:id="@+id/textView_requirement_for_borrower_details_bottomSheet"
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorBlack" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center_horizontal"
+                android:textColor="@color/colorBlack"
+                android:text="@string/text_production_methods"/>
+
+            <TextView
+                android:id="@+id/textView_way_of_getting_details_bottomSheet"
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorBlack" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center_horizontal"
+                android:textColor="@color/colorBlack"
+                android:text="@string/string_repayment_option"/>
+
+            <TextView
+                android:id="@+id/textView_repayment_option_details_bottomSheet"
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorBlack" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+
+</LinearLayout>

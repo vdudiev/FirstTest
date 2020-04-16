@@ -25,7 +25,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 
 public class BottomSheetDialogSecondMain extends BottomSheetDialogFragment {
-    private RecyclerView recyclerView;
+        private RecyclerView recyclerView;
     ArticleProductionMethodsAdapter adapter;
 
     @Nullable

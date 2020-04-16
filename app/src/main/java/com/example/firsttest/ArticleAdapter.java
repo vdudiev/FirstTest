@@ -67,8 +67,12 @@ public class ArticleAdapter extends RecyclerView.Adapter<ArticleAdapter.ViewHold
                     titleDetailsToSet = list.get(getAdapterPosition()).title;
                     textDetailsToSet = list.get(getAdapterPosition()).text;
                     imageDetailsToSet = list.get(getAdapterPosition()).image;
-                    MainActivity mainAct = new MainActivity();
-                    mainAct.openNewsDetails();
+
+                       /* FragmentTransaction fragmentTransactionNewsDetails = getSupportFragmentManager().beginTransaction();
+                        FragmentNewsDetails fragmentNewsDetails = new FragmentNewsDetails();
+                        fragmentTransactionNewsDetails.replace(R.id.Fragment_content,fragmentNewsDetails);
+                        fragmentTransactionNewsDetails.addToBackStack(null);
+                        fragmentTransactionNewsDetails.commit();*/
                 }
             });
 

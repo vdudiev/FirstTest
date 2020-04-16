@@ -9,6 +9,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -144,6 +145,14 @@ public class SecondActivityMain extends AppCompatActivity {
         bottomSheetDialogSecondMain.show(getSupportFragmentManager(),"bottomSheetDialogSecondMain");
     }
 
+
+
+    public void openCompaniesDetailsBottomSheet(){
+        BottomSheetDialogDetailsCompanies bottomSheetDialogDetailsCompanies = new BottomSheetDialogDetailsCompanies();
+        bottomSheetDialogDetailsCompanies.show(getSupportFragmentManager(),"bottomSheetDialogDetailsCompanies");
+
+
+    }
 
 
 
