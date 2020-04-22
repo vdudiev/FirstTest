@@ -1,17 +1,28 @@
 package com.example.firsttest;
 
+import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
+import android.media.Image;
 import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.android.volley.RequestQueue;
 import com.squareup.picasso.Picasso;
+import com.squareup.picasso.RequestCreator;
+import com.squareup.picasso.Target;
 
 import java.util.List;
 
@@ -19,6 +30,7 @@ public class ArticleGoodOffersAdapter extends RecyclerView.Adapter<ArticleGoodOf
 
     LayoutInflater inflater;
     List<ArticleGoodOffersData> list;
+
 
     public ArticleGoodOffersAdapter(List<ArticleGoodOffersData> list, Context context) {
         this.list = list;
@@ -44,8 +56,10 @@ public class ArticleGoodOffersAdapter extends RecyclerView.Adapter<ArticleGoodOf
         holder.sumGoodOffers.setText(currentArticleGoodOffersData.getSum() + " рублей");
         holder.buttonTextGoodOffer.setText(currentArticleGoodOffersData.getButton_text());
 
+        SecondActivityMain secondActivityMain = new SecondActivityMain();
+        SecondActivityMain.buttonGoodOffersUrl = currentArticleGoodOffersData.button_url;
 
-      //Picasso.get().load(currentArticleGoodOffersData.getImage()).into(holder.imageView);
+        RequestCreator bgImage =  Picasso.get().load(currentArticleGoodOffersData.getImage());
 
     }
 
@@ -60,8 +74,8 @@ public class ArticleGoodOffersAdapter extends RecyclerView.Adapter<ArticleGoodOf
         final TextView textGoodOffers;
         final TextView sumGoodOffers;
         final TextView buttonTextGoodOffer;
-        //final ImageView imageView;
-        //final  buttonTextGoodOfferURL;
+        final LinearLayout bgGoodOffers;
+
         ViewHolder(View view){
             super(view);
             //imageView = view.findViewById(R.id.linearLayout_row_good_offers);
@@ -70,6 +84,7 @@ public class ArticleGoodOffersAdapter extends RecyclerView.Adapter<ArticleGoodOf
             textGoodOffers = view.findViewById(R.id.text_text_good_offers);
             sumGoodOffers = view.findViewById(R.id.text_sum_good_offers);
             buttonTextGoodOffer = view.findViewById(R.id.button_good_offers);
+            bgGoodOffers = view.findViewById(R.id.linearLayout_row_good_offers);
 
 
 

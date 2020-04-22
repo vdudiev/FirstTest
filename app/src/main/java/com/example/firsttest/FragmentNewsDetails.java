@@ -7,11 +7,15 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.squareup.picasso.Picasso;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -75,7 +79,7 @@ public class FragmentNewsDetails extends Fragment {
     }
     String titleDetails;
     String textDetails;
-    Image imageDetails;
+    String imageDetails;
 
 
 
@@ -83,6 +87,19 @@ public class FragmentNewsDetails extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_fragment_news_details, container, false);
+
+        TextView textViewTitleNewsDetails = root.findViewById(R.id.textView_title_news_details);
+        TextView textViewTextNewsDetails = root.findViewById(R.id.textView_text_news_details);
+        ImageView  imageViewNewsDetails = root.findViewById(R.id.imageView_news_details);
+
+        textViewTitleNewsDetails.setText(titleDetails);
+        textViewTextNewsDetails.setText(textDetails);
+        Picasso.get().load(imageDetails).into(imageViewNewsDetails);
+
+
+
+
+
         return root;
     }
 

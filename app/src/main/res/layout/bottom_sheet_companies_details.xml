@@ -2,8 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/round_corner_button_white">
+    android:layout_height="wrap_content"
+    android:background="@drawable/round_corner_bottom_sheet_white">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -21,10 +21,11 @@
 
         <Button
             android:id="@+id/button_close_details_bottomSheet"
-            android:layout_width="30dp"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
             android:layout_marginStart="105dp"
             android:layout_marginEnd="25dp"
-            android:layout_height="30dp"
+
             android:background="@drawable/cross"/>
     </LinearLayout>
 
@@ -82,12 +83,12 @@
 
             <TextView
                 android:id="@+id/textView_date_toDate_details_bottomSheet"
-                android:text="OT 7 ДО 365"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="10sp"
+                android:layout_marginBottom="5dp"
+                android:text="OT 7 ДО 365"
                 android:textColor="@color/colorBlack"
-                android:layout_marginBottom="5dp"/>
+                android:textSize="10sp" />
 
             <TextView
                 android:id="@+id/texView_rate_details_bottomSheet"
@@ -100,8 +101,8 @@
         </LinearLayout>
 
         <ImageView
-            android:src="@mipmap/ic_launcher_round"
             android:id="@+id/imageView_logo_details_bottomSheet"
+            android:src="@mipmap/ic_launcher_round"
             android:scaleType="centerCrop"
             android:layout_width="40dp"
             android:layout_marginTop="8dp"
@@ -128,10 +129,10 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="215dp"
         android:layout_marginTop="5dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginEnd="24dp">
+        android:layout_marginStart="23dp"
+        android:layout_marginEnd="23dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -141,6 +142,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textSize="15sp"
                 android:gravity="center_horizontal"
                 android:textColor="@color/colorBlack"
                 android:text="@string/string_requirement_for_borrower"/>
@@ -149,6 +151,7 @@
                 android:id="@+id/textView_requirement_for_borrower_details_bottomSheet"
                 android:layout_width="match_parent"
                 android:layout_marginTop="10dp"
+                android:textSize="15sp"
                 android:layout_height="wrap_content"
                 android:textColor="@color/colorBlack" />
 
@@ -157,6 +160,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:gravity="center_horizontal"
+                android:textSize="15sp"
                 android:textColor="@color/colorBlack"
                 android:text="@string/text_production_methods"/>
 
@@ -164,6 +168,7 @@
                 android:id="@+id/textView_way_of_getting_details_bottomSheet"
                 android:layout_width="match_parent"
                 android:layout_marginTop="10dp"
+                android:textSize="15sp"
                 android:layout_height="wrap_content"
                 android:textColor="@color/colorBlack" />
 
@@ -173,18 +178,31 @@
                 android:layout_marginTop="10dp"
                 android:gravity="center_horizontal"
                 android:textColor="@color/colorBlack"
+                android:textSize="15sp"
                 android:text="@string/string_repayment_option"/>
 
             <TextView
                 android:id="@+id/textView_repayment_option_details_bottomSheet"
                 android:layout_width="match_parent"
                 android:layout_marginTop="10dp"
+                android:textSize="15sp"
                 android:layout_height="wrap_content"
                 android:textColor="@color/colorBlack" />
 
 
         </LinearLayout>
     </ScrollView>
+    <Button
+        android:id="@+id/button_send_request_details_bottomSheet"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:textColor="@color/colorBlack"
+        android:textSize="15sp"
+        android:background="@drawable/round_corners"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="23dp"
+        android:layout_marginEnd="23dp"
+        android:layout_marginBottom="30dp"/>
 
 
 

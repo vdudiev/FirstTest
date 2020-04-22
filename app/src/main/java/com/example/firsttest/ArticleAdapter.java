@@ -1,7 +1,6 @@
 package com.example.firsttest;
 
 import android.content.Context;
-import android.media.Image;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,13 +19,13 @@ import java.util.List;
 public class ArticleAdapter extends RecyclerView.Adapter<ArticleAdapter.ViewHolder> {
 
     LayoutInflater inflater;
-    List<ArticleData> list;
-    String titleDetailsToSet;
-    String textDetailsToSet;
-    String imageDetailsToSet;
-    Context cont;
+    private List<ArticleData> list;
+    private String titleDetailsToSet;
+    private String textDetailsToSet;
+    private String imageDetailsToSet;
+    private Context cont;
 
-    public ArticleAdapter(List<ArticleData> list,Context context) {
+    ArticleAdapter(List<ArticleData> list,Context context) {
         this.list = list;
         this.inflater = LayoutInflater.from(context);
         cont = context;
@@ -36,7 +35,6 @@ public class ArticleAdapter extends RecyclerView.Adapter<ArticleAdapter.ViewHold
     @Override
     public ArticleAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = inflater.inflate(R.layout.recycler_row,parent,false);
-       // View view = LayoutInflater.from(context).inflate(R.layout.recycler_row,parent,false);
 
         return new ViewHolder(view);
     }
@@ -56,24 +54,25 @@ public class ArticleAdapter extends RecyclerView.Adapter<ArticleAdapter.ViewHold
         return list.size();
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder {
+    class ViewHolder extends RecyclerView.ViewHolder {
         final ImageView imageView;
         final TextView textView, titleView;
         ViewHolder(View view){
             super(view);
-            view.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    titleDetailsToSet = list.get(getAdapterPosition()).title;
-                    textDetailsToSet = list.get(getAdapterPosition()).text;
-                    imageDetailsToSet = list.get(getAdapterPosition()).image;
+            view.setOnClickListener(v -> {
+                titleDetailsToSet = list.get(getAdapterPosition()).title;
+                textDetailsToSet = list.get(getAdapterPosition()).text;
+                imageDetailsToSet = list.get(getAdapterPosition()).image;
 
-                       /* FragmentTransaction fragmentTransactionNewsDetails = getSupportFragmentManager().beginTransaction();
-                        FragmentNewsDetails fragmentNewsDetails = new FragmentNewsDetails();
-                        fragmentTransactionNewsDetails.replace(R.id.Fragment_content,fragmentNewsDetails);
-                        fragmentTransactionNewsDetails.addToBackStack(null);
-                        fragmentTransactionNewsDetails.commit();*/
-                }
+
+                   FragmentTransaction fragmentTransactionNewsDetails = ((FragmentActivity)cont).getSupportFragmentManager().beginTransaction();
+                    FragmentNewsDetails fragmentNewsDetails = new FragmentNewsDetails();
+                    fragmentNewsDetails.titleDetails = titleDetailsToSet;
+                    fragmentNewsDetails.imageDetails = imageDetailsToSet;
+                    fragmentNewsDetails.textDetails = textDetailsToSet;
+                    fragmentTransactionNewsDetails.replace(R.id.Fragment_content,fragmentNewsDetails);
+                    fragmentTransactionNewsDetails.addToBackStack(null);
+                    fragmentTransactionNewsDetails.commit();
             });
 
             imageView = view.findViewById(R.id.image_news);

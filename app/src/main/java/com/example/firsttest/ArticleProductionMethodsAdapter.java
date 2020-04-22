@@ -53,20 +53,13 @@ public class ArticleProductionMethodsAdapter extends RecyclerView.Adapter<Articl
         ViewHolder(View view){
             super(view);
 
-            view.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                 selectedMethodName = list.get(getAdapterPosition()).name;
-                }
-            });
+            view.setOnClickListener(v -> selectedMethodName = list.get(getAdapterPosition()).name);
 
             name = view.findViewById(R.id.text_name_bottom_sheet_list);
 
         }
     }
-    public interface OnNoteListener{
-        void onNoteClick(int position);
-    }
+
 
 
 }

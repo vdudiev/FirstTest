@@ -90,7 +90,6 @@ public class SecondActivityMain extends AppCompatActivity {
 
 
     public void changeNameMethod (String n){
-
         name = n;
         method.setText(name);
     }
@@ -134,9 +133,10 @@ public class SecondActivityMain extends AppCompatActivity {
         startActivity(intent);
     }
 
+    static String buttonGoodOffersUrl;
     public void OpenBrowserGoodOffers(View view) {
         Intent browserIntent = new
-                Intent(Intent.ACTION_VIEW, Uri.parse("https://yandex.ru"));
+                Intent(Intent.ACTION_VIEW, Uri.parse(buttonGoodOffersUrl));
         startActivity(browserIntent);
     }
 
@@ -147,12 +147,12 @@ public class SecondActivityMain extends AppCompatActivity {
 
 
 
-    public void openCompaniesDetailsBottomSheet(){
-        BottomSheetDialogDetailsCompanies bottomSheetDialogDetailsCompanies = new BottomSheetDialogDetailsCompanies();
-        bottomSheetDialogDetailsCompanies.show(getSupportFragmentManager(),"bottomSheetDialogDetailsCompanies");
 
 
-    }
+
+
+
+
 
 
 
