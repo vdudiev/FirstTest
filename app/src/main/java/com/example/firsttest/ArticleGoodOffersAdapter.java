@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.ImageFormat;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.media.Image;
@@ -24,6 +25,10 @@ import com.squareup.picasso.Picasso;
 import com.squareup.picasso.RequestCreator;
 import com.squareup.picasso.Target;
 
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.List;
 
 public class ArticleGoodOffersAdapter extends RecyclerView.Adapter<ArticleGoodOffersAdapter.ViewHolder> {
@@ -56,10 +61,13 @@ public class ArticleGoodOffersAdapter extends RecyclerView.Adapter<ArticleGoodOf
         holder.sumGoodOffers.setText(currentArticleGoodOffersData.getSum() + " рублей");
         holder.buttonTextGoodOffer.setText(currentArticleGoodOffersData.getButton_text());
 
-        SecondActivityMain secondActivityMain = new SecondActivityMain();
         SecondActivityMain.buttonGoodOffersUrl = currentArticleGoodOffersData.button_url;
 
-        RequestCreator bgImage =  Picasso.get().load(currentArticleGoodOffersData.getImage());
+        //  RequestCreator bgImage =  Picasso.get().load(currentArticleGoodOffersData.getImage());
+
+       /* Drawable drw = ImageOperations(this,currentArticleGoodOffersData.getImage(), "drawable");
+        holder.bgGoodOffers.setBackground(drw);*/
+
 
     }
 
@@ -90,4 +98,23 @@ public class ArticleGoodOffersAdapter extends RecyclerView.Adapter<ArticleGoodOf
 
         }
     }
+    /*private Drawable ImageOperations(ArticleGoodOffersAdapter ctx, String url, String saveFilename) {
+        try {
+            InputStream is = (InputStream) this.fetch(url);
+            Drawable d = Drawable.createFromStream(is, saveFilename);
+            return d;
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+            return null;
+        } catch (IOException e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+    public Object fetch(String address) throws MalformedURLException,IOException {
+        URL url = new URL(address);
+        Object content = url.getContent();
+        return content;
+    }*/
 }
