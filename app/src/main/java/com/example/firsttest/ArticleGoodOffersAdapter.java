@@ -62,11 +62,8 @@ public class ArticleGoodOffersAdapter extends RecyclerView.Adapter<ArticleGoodOf
         holder.buttonTextGoodOffer.setText(currentArticleGoodOffersData.getButton_text());
 
         SecondActivityMain.buttonGoodOffersUrl = currentArticleGoodOffersData.button_url;
-
-        //  RequestCreator bgImage =  Picasso.get().load(currentArticleGoodOffersData.getImage());
-
-       /* Drawable drw = ImageOperations(this,currentArticleGoodOffersData.getImage(), "drawable");
-        holder.bgGoodOffers.setBackground(drw);*/
+        Picasso.get().load(currentArticleGoodOffersData.getImage()).into(holder.imageimageBgGoodOffers);
+       
 
 
     }
@@ -82,7 +79,7 @@ public class ArticleGoodOffersAdapter extends RecyclerView.Adapter<ArticleGoodOf
         final TextView textGoodOffers;
         final TextView sumGoodOffers;
         final TextView buttonTextGoodOffer;
-        final LinearLayout bgGoodOffers;
+        final ImageView imageimageBgGoodOffers;
 
         ViewHolder(View view){
             super(view);
@@ -92,7 +89,7 @@ public class ArticleGoodOffersAdapter extends RecyclerView.Adapter<ArticleGoodOf
             textGoodOffers = view.findViewById(R.id.text_text_good_offers);
             sumGoodOffers = view.findViewById(R.id.text_sum_good_offers);
             buttonTextGoodOffer = view.findViewById(R.id.button_good_offers);
-            bgGoodOffers = view.findViewById(R.id.linearLayout_row_good_offers);
+            imageimageBgGoodOffers = view.findViewById(R.id.image_good_offers_background);
 
 
 
